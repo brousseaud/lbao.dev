@@ -1,0 +1,13 @@
+// Grid system
+.content {
+  @include grid-row;
+}
+.main {
+  @include grid-column($main-sm-columns);
+  .sidebar-primary & {
+    @include grid-column($main-sm-columns - $sidebar-sm-columns);
+  }
+}
+.sidebar {
+  @include grid-column($sidebar-sm-columns);
+}

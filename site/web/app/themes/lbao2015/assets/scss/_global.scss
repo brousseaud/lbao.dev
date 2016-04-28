@@ -1,0 +1,30 @@
+/* Fonts et Imports */
+@font-face {
+	font-family: 'BrothersBold';
+	src: url("../fonts/BrothBol.eot");
+}
+@font-face {
+	font-family: 'BrothersBold';
+	src: url("../fonts/BrothBol.woff") format("woff"), url("../fonts/BrothBol.svg#BrothersBold") format("svg");
+}
+@font-face {
+	font-family: 'BrothersRegular';
+	src: url("../fonts/BrothReg.eot");
+}
+@font-face {
+	font-family: 'BrothersRegular';
+	src: url("../fonts/BrothReg.woff") format("woff"), url("../fonts/BrothReg.svg#BrothersRegular") format("svg");
+}
+.top-bar {
+	padding-left:.9375rem;
+}
+.versus {
+	background-color:#333;
+	.vs {
+		display:inline-block;
+		vertical-align:middle;
+		color:#fff;
+		font-family:'BrothersRegular';
+		text-transform:uppercase;
+		}
+	}
