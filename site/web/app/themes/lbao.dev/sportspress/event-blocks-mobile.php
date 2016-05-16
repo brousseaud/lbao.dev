@@ -18,7 +18,7 @@ $defaults = array(
 	'date_to' => 'default',
 	'league' => null,
 	'season' => null,
-	'number' => 24,
+	'number' => 6,
 	'link_teams' => get_option( 'sportspress_link_teams', 'no' ) == 'yes' ? true : false,
 	'link_events' => get_option( 'sportspress_link_events', 'yes' ) == 'yes' ? true : false,
 	'paginated' => get_option( 'sportspress_event_blocks_paginated', 'yes' ) == 'yes' ? true : false,
@@ -110,7 +110,8 @@ echo '<h4 class="sp-table-caption">' . $title . '</h4>';
 
 					endforeach;
 					?>
-					<li class="game">
+					<div class="column">
+						<div class="game">
 						<div class="row date">
 							<div class="small-12 columns">
 								<time class="sp-event-date" datetime="<?php echo $event->post_date; ?>">
@@ -159,7 +160,8 @@ echo '<h4 class="sp-table-caption">' . $title . '</h4>';
 						};?>
 						</div>
 					</div>
-					</li>
+				</div>
+			</div>
 					<?php
 					$i++;
 				endforeach;

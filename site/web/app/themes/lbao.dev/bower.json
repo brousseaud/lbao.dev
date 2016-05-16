@@ -12,14 +12,14 @@
   "overrides": {
     "foundation-sites": {
       "main": [
-
         "./scss/foundation.scss",
-
         "./js/foundation.core.js",
         "./js/foundation.util.*.js",
         "./js/*.js"
-
       ]
     }
+  },
+  "devDependencies": {
+    "motion-ui": "^1.2.2"
   }
 }

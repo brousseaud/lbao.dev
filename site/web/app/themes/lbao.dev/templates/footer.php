@@ -1,14 +1,15 @@
-<footer class="content-info">
+<footer class="bottom content-info">
   <div class="container">
-    <?php dynamic_sidebar('sidebar-footer'); ?>
+    <!--<?php dynamic_sidebar('sidebar-footer'); ?>-->
   </div>
 </footer>
 <script>
 jQuery(document).ready(function(){
+  jQuery(".top-scores").ready(function(){
   pos = 0
   moveThis = ((1/10)*100)
   move2 = moveThis
-  jQuery(".left-arrow").click(function(){
+  jQuery(".top-scores .left-arrow").click(function(){
     if(pos >= -130) {
       jQuery(".game").animate({
         left:"-=" + move2  + "%"
@@ -16,7 +17,7 @@ jQuery(document).ready(function(){
       pos -= move2;
     };
   });
-  jQuery(".right-arrow").click(function(){
+  jQuery(".top-scores .right-arrow").click(function(){
     if(pos == 0){
     }else{
     jQuery(".game").animate({
@@ -26,4 +27,6 @@ jQuery(document).ready(function(){
   }
     });
   });
+  });
+
 </script>

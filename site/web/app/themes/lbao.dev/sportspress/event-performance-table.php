@@ -20,6 +20,7 @@ if ( ! isset( $class ) ) $class = null;
 if ( ! isset( $lineups ) ) $lineups = array();
 if ( ! isset( $subs ) ) $subs = array();
 ?>
+<div class="small-12 large-6 columns">
 <div class="sp-template sp-template-event-performance sp-template-event-performance-<?php echo $mode; ?><?php if ( isset( $class ) ) { echo ' ' . $class; } ?>">
 	<?php if ( $caption ): ?>
 		<h4 class="sp-table-caption"><?php echo $caption; ?></h4>
@@ -96,7 +97,7 @@ if ( ! isset( $subs ) ) $subs = array();
 						endif;
 
 						echo '<td class="data-name">' . $name . '</td>';
-						
+
 						if ( $mode == 'icons' ) echo '<td class="sp-performance-icons">';
 
 						foreach ( $labels as $key => $label ):
@@ -104,7 +105,7 @@ if ( ! isset( $subs ) ) $subs = array();
 								continue;
 							if ( isset( $position ) && 'position' == $key )
 								continue;
-							
+
 							$value = '&mdash;';
 							if ( $key == 'position' ):
 								$positions = array();
@@ -145,7 +146,7 @@ if ( ! isset( $subs ) ) $subs = array();
 								echo apply_filters( 'sportspress_event_performance_icons', $icons, $performance_id, $value );
 							endif;
 						endforeach;
-						
+
 						if ( $mode == 'icons' ) echo '</td>';
 
 						echo '</tr>';
@@ -161,6 +162,7 @@ if ( ! isset( $subs ) ) $subs = array();
 					<?php
 					do_action( 'sportspress_event_performance_table_footer', $data, $labels, $position, $performance_ids );
 					if ( $show_total && ( ! $primary || sizeof( array_intersect_key( $totals, array_flip( (array) $primary ) ) ) ) ) {
+						$i=0;
 						?>
 						<tr class="sp-total-row <?php echo ( $i % 2 == 0 ? 'odd' : 'even' ); ?>">
 							<?php
@@ -213,5 +215,5 @@ if ( ! isset( $subs ) ) $subs = array();
 		</table>
 	</div>
 </div>
-
+</div>
 <?php do_action( 'sportspress_after_event_performance_table', $data, $lineups, $subs, $class ); ?>
